@@ -1,0 +1,274 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "InterTight-Regular";
+  src: url("../fonts/InterTight-Regular.woff2");
+}
+@font-face {
+  font-family: "Philosopher-Regular";
+  src: url("../fonts/Philosopher-Regular.woff2");
+}
+@font-face {
+  font-family: "Philosopher-Bold";
+  src: url("../fonts/Philosopher-Bold.woff2");
+}
+@font-face {
+  font-family: "Philosopher-Italic";
+  src: url("../fonts/Philosopher-Italic.woff2");
+}
+html, body {
+  font-family: "InterTight-Regular";
+  line-height: 1;
+  text-size-adjust: 100%;
+  color: white;
+  background-color: #12111B;
+}
+
+#smooth-content {
+  will-change: transform;
+}
+
+.section1__logo, .section2 {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  will-change: transform;
+}
+.section1 .section1__logo {
+  display: flex;
+  align-items: center;
+}
+.section1 .section1__logo img {
+  width: 153px;
+}
+.section1 .section1__logo, .section1 .section1__text, .section1 .section1__language, .section1 .section1__messenger {
+  will-change: transform;
+}
+.section1 .section1__scroll-icon, .section1 .section1__text, .section1 .section1__language, .section1 .section1__messenger {
+  position: absolute;
+}
+.section1 .section1__scroll-icon {
+  transform: translate3d(-50%, -200%, 0);
+  width: 32px;
+  bottom: 0;
+  left: 50%;
+}
+.section1 .section1__text {
+  transform: translate(0px, -200%);
+  opacity: 0;
+  font-size: 12px;
+  line-height: 130%;
+  top: 12px;
+  left: 24px;
+  color: rgba(153, 153, 153, 0.4);
+}
+.section1 .section1__language {
+  transform: translate(0px, -200%);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  top: 8px;
+  right: 14px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.section1 .section1__language img {
+  width: 20px;
+}
+.section1 .section1__messenger {
+  transform: translate(0px, 200%);
+  opacity: 0;
+  bottom: 32px;
+  right: 32px;
+}
+.section1 .section1__messenger .messenger__text {
+  display: block;
+  font-size: 12px;
+  line-height: 130%;
+  margin-bottom: 16px;
+  color: rgba(153, 153, 153, 0.5);
+}
+.section1 .section1__messenger .messenger__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  text-decoration: none;
+  color: inherit;
+}
+.section1 .section1__messenger .messenger__link .link__span {
+  font-size: 16px;
+  line-height: 120%;
+}
+.section1 .section1__messenger .messenger__link .link__span span:first-child {
+  font-family: "Philosopher-Bold";
+}
+.section1 .section1__messenger .messenger__link .link__span span:last-child {
+  font-family: "Philosopher-Italic";
+}
+.section1 .section1__messenger .messenger__link img {
+  width: 22px;
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+.section2 .section2__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate3d(0, 0, 0);
+}
+.section2 .section2__text img {
+  width: 24px;
+}
+.section2 .section2__text h1 {
+  font-family: "Philosopher-Regular";
+  font-weight: normal;
+  text-align: center;
+  font-size: min(3.76vw + 3.76vh, 80px);
+  letter-spacing: -0.05em;
+  max-width: min(32.712vw + 32.712vh, 696px);
+  margin: min(1.128vw + 1.128vh, 24px) 0;
+}
+.section2 .section2__text h1 span {
+  font-family: "Philosopher-Italic";
+  color: #CDBDA0;
+}
+.section2 .section2__text p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  max-width: 400px;
+}
+
+.section3 {
+  min-height: 500vh;
+  min-height: 500svh;
+  display: flex;
+  justify-content: center;
+}
+.section3 .opa {
+  will-change: transform;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+@media (orientation: portrait) {
+  .section1 .section1__scroll-icon {
+    transform: translate3d(-50%, -100%, 0);
+  }
+}
+@media (orientation: portrait) and (min-height: 721px) {
+  .section1 .section1__text {
+    top: 24px;
+  }
+  .section1 .section1__language {
+    top: 20px;
+  }
+}
+@media (max-width: 991.9px) and (min-height: 481px) {
+  .section2 .section2__text p {
+    font-size: 15px;
+    max-width: 374px;
+  }
+}
+@media (max-width: 480.9px), (max-height: 480.9px) {
+  .section1 .section1__messenger {
+    bottom: 24px;
+    right: 24px;
+  }
+  .section1 .section1__messenger .messenger__text {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  .section1 .section1__messenger .messenger__link {
+    padding: 12px 24px;
+  }
+  .section1 .section1__messenger .messenger__link .link__span {
+    font-size: 15px;
+  }
+  .section1 .section1__messenger .messenger__link img {
+    width: 20px;
+  }
+}
+@media (max-width: 380.9px), (max-height: 480.9px) {
+  .section1 .section1__logo img {
+    width: 116px;
+  }
+  .section1 .section1__scroll-icon {
+    width: 24px;
+  }
+  .section2 .section2__text img {
+    width: 18px;
+  }
+  .section2 .section2__text h1 {
+    font-size: min(2.82vw + 2.82vh, 60px);
+    max-width: min(24.534vw + 24.534vh, 522px);
+    margin: min(0.846vw + 0.846vh, 18px) 0;
+  }
+  .section2 .section2__text p {
+    font-size: 13px;
+    max-width: 320px;
+  }
+}
+@media (max-width: 380.9px), (max-height: 380.9px) {
+  .section1 .section1__text {
+    font-size: 11px;
+    left: 15px;
+  }
+  .section1 .section1__language {
+    right: 5px;
+    height: 36px;
+  }
+}
+@media (max-width: 355.9px) {
+  .section1 .section1__messenger {
+    width: calc(100% - 30px);
+    right: 15px;
+  }
+  .section1 .section1__messenger .messenger__text {
+    text-align: center;
+  }
+}
+@media (max-width: 320.9px), (max-height: 320.9px) {
+  .section1 .section1__text {
+    font-size: 10px;
+  }
+  .section1 .section1__language {
+    height: 32px;
+  }
+}
+@media (max-height: 430.9px) {
+  .section1 .section1__logo img {
+    width: 98px;
+  }
+}
+@media (max-height: 380.9px) {
+  .section1 .section1__logo img {
+    width: 78px;
+  }
+}
